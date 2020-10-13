@@ -1,0 +1,45 @@
+.row {
+  /*moves to the right*/
+  color: white;
+  margin-left: 20px;
+}
+
+.row_poster {
+  /*contains the images to fit in the screen*/
+  object-fit: contain;
+  width: 100%;
+  /*makes the movie icons smaller to fit*/
+  max-height: 100px;
+  /*creates delay when things change such as the hover down below*/
+  transition: transform 450ms;
+  margin-right: 10px;
+}
+
+.row_posters {
+  /*turn the cloumn of movies into rows*/
+  display: flex;
+  /*to make a scroll bar when moving along y-axis between movies*/
+  overflow-y: hidden;
+  overflow-x: scroll;
+  /*stops the cropping of the icons when hovered over*/
+  padding: 20px;
+}
+
+.row_posters::-webkit-scrollbar {
+  /*keep scroll bar functionality but dont show scroll bar*/
+  display: none;
+}
+
+.row_poster:hover {
+  /*allows hovering highlight over movies*/
+  transform: scale(1.08);
+}
+
+.row_posterLarge {
+  /*to make the original netflix movies bigger from the rest*/
+  max-height: 250px;
+}
+
+.row_posterLarge:hover {
+  transform: scale(1.09);
+}
